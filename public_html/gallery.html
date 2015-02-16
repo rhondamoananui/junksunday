@@ -1,0 +1,318 @@
+<!doctype html>
+	<head>
+		<title>Junk Sunday</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Browse our photo gallery, where we display a range of vintage clothing, retro items, mid centry furniture, and much more">
+		<meta name="viewport" content="width=device-width" >
+		
+		
+		<!-- <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script> -->
+		<!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+		
+		<!-- MY STYLESHEETS -->
+		<link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+		
+	</head>
+	<body>
+<!-- HEADER -->
+		<header>
+
+			<div class="menu-icon">
+				<a href="index.html"><img src="assets/img/home-icon.png" alt="home"></a>
+				<h3>587 Mt Eden Rd</h3>
+				<img src="assets/img/menu-icon.png" id="menuicon" alt="menu">
+			</div>
+
+			<h1 id="logo"><a href="index.html"><img src="assets/img/logo2.gif" alt="Junk Sunday"></a></h1>
+			<H4>587 MT EDEN ROAD, MT EDEN</H4>
+			<H4>OPEN 9am - 6pm Every Sunday</H4>
+		</header>
+<!-- NAVIGATION -->
+		<nav class="nav">
+			<h1 class="hide">Junk Sunday's Retro, Vintage, Antique and Mid-Centry Treasures</h1>
+			<ul class="nav">
+				<li class="nav"><a href="index.html" >HOME</a></li>
+				<li class="nav"><a href="gallery.html" id="current">GALLERY</a></li>
+				<li class="nav"><a href="directions.html">DIRECTIONS</a></li>
+				<li class="nav"><a href="contact.html" >CONTACT</a></li>
+			</ul>
+		</nav>
+<!-- DIVIDER -->
+		<div id="red-line"></div>
+
+<!-- MAIN CONTENT -->
+		<section class="main-content">
+			<h1 class="hide">Junk Sunday's Retro, Vintage, Antique and Mid-Centry Treasures</h1>
+			<div class="background-layer">
+			<article class="icons">
+				<!-- facebook icon -->
+				<div class="facebook">
+					<a href="https://www.facebook.com/pages/Junksunday/466260626818399">
+						<img src="assets/img/facebook-icon.png" alt="facebook icon">
+					</a>
+						<a href="https://www.facebook.com/pages/Junksunday/466260626818399"><h4>Join Us On Facebook</h4></a>
+					
+				</div>
+				<!-- google maps icon -->
+				<div class="map-icon">
+					<a href="directions.html">
+						<img src="assets/img/maps-icon.png" alt="map icon">
+					</a>
+					<a href="directions.html"><h4>Get Directions</h4></a>
+				</div>
+			</article>
+
+			<div id="wrapper"> 
+				<!-- When adding new images, the index number on the Previous() also needs to be changed where y = 18 eg if adding a new image change y = 19, if adding 2 images change y = 20-->
+				<img src="assets/img/gallery/IMG1.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img2.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img3.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img4.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img5.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img6.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img7.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img8.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img9.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img10.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img11.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img12.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img13.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img14.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img15.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img16.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img17.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img18.jpg" alt="" class="lightbox_trig">
+				<img src="assets/img/gallery/img19.jpg" alt="" class="lightbox_trig">
+
+			</div>
+		</div>
+		</section>
+<!-- BOTTOM NAVIGATION -->
+		<section class="bottom-nav">
+			<h1 class="hide">Junk Sunday's Retro, Vintage, Antique and Mid-Centry Treasures</h1> 
+			<article>
+				<a href="index.html">HOME</a> | <a href="gallery.html">GALLERY</a> | <a href="directions.html">DIRECTIONS</a> | <a href="contact.html">CONTACTS</a>
+				<h4>DESIGNED BY: <a href="http://webcoder.co.nz">webcoder.co.nz</a></h4>
+			</article>
+
+		</section>
+<!-- FOOTER -->
+		<footer>
+			<!-- footer image -->
+			<img src="assets/img/footer-img.png" alt="Junk Sunday 587 Mt Eden Rd, Mt Eden Auckland">
+		</footer>
+<!-- MODAL -->
+		<div id="modal">
+
+		</div>
+
+	</body>
+	<script type="text/javascript">
+	$(document).ready( function() {  
+
+		// DROPDOWN MENU - FOR MOBILE VIEW   ------------------------------------------------------
+		$('#menuicon').click(function(event) {
+
+			$('nav ').removeClass('nav').addClass('show').toggle(); 
+			$('nav ul').removeClass('nav').addClass('ul').toggle();
+			$('nav ul li').removeClass('nav').addClass('li').toggle();
+			$('nav ul li a').removeClass('nav').addClass('a').toggle();
+
+
+		});
+
+		// STICKY NAVIGATION - FOR TABLET AND DESKTOP VIEW  ---------------------------------------
+		
+		//number of pixels before modifying styles
+		var num = 170; 
+
+		// Only run this script if the screen is larger than a mobile 
+		if (window.matchMedia('(min-width: 31.25em)','(min-width: 76.5em)').matches) {
+			$(window).bind('scroll', function () {
+		    	if ($(window).scrollTop() > num) {
+		        	$('nav').addClass('fixed');
+		   	 	} else {
+		        	$('nav').removeClass('fixed');
+		    	}
+			});
+		}
+
+		// LIGHTBOX - CLICK ON A THUMB TO SHOW THE LARGER IMAGE IN A LIGHTBOX  --------------------
+
+        // when a thumb is clicked
+        $('.lightbox_trig').click(function() {              
+
+            // Show the img in a modal
+            // Get the value of the src for the first element
+            var image_src = $(this).attr("src");          
+            
+            // change the thumb to full (to display the larger image)
+            var full_src = image_src.replace("thumb", "full");
+            
+            
+          	// remove the class that hides the modal, add the class that shows it. insert the html inside the modal
+           	$('#modal').removeClass('hide').addClass('modal').html('<div id="close-button"><button id="close">Close</button></div><div id="modal-row"><img src="assets/img/back_button.png" id="previous"><div id="display"><img src="' + full_src + '" data-transition="slide" id="lgeImg"/></div><img src="assets/img/forward_button.png" id="next"></div><div id="bottom-modal"></div>');   
+            
+
+        }); 
+
+
+	    thumbs = $('#wrapper img.lightbox_trig'); 
+
+	    // loop through thumbs
+	    var aImgNames = [];
+	    for(var i=0;i<thumbs.length;i++) {
+	    filename = getFilename(thumbs[i]);
+
+	        aImgNames.push(filename);
+	    }
+
+	    // strip out the file name
+	    // push that into an array  -  aImgNames
+        
+
+
+
+ 
+
+	    //1/    need array of all thumbnail srcs
+	    //      =querySelectorAll(.thumbs)
+	    //      turn filename into an array, pop off the last item
+	            
+            
+
+            
+	    function getFilename(objName){ 
+			
+			// get the file path, then strip out the name
+	        file = objName.src; 
+	        var index = file.lastIndexOf("/") + 1;   // returns 79 
+	        var filename = file.substr(index);       // returns img1.jpg
+
+	        return filename;             // returns the filename eg. image1.jpg
+	      
+
+	    }
+        
+
+
+	    //2/    What is the current image
+	    //      Where is it in the array
+
+
+	    function whatIsMyIndex(){
+	        // select the current image
+	        currMain = document.querySelector('#modal #display img');
+	        //console.log(currMain);
+
+	        // get the filename of the current img
+	       imagename = getFilename(currMain);
+
+
+	        //imagename = currMain.substring(currMain.lastIndexOf('/')+1, currMain.length) ;
+
+	        return aImgNames.indexOf(imagename) ;
+	    };
+
+          
+
+    	//3/    Choose the one before (if it exists)
+
+
+    	// eventlisteners
+
+
+    	// NEXT BUTTON  ---------------------------------------------------------------------------
+	    $(document).on("click", "#next", function(){
+	        
+	        // get the index of the image
+	        x = whatIsMyIndex();
+
+	        // find the next index number
+	        y = x + 1;
+
+	        // if it is the last image
+	        if(x == aImgNames.length-1){
+
+	        	// make y the first image 
+	            y = 0;
+	        }
+
+	        // display the new file on each click
+	        document.getElementById('display').innerHTML = '<img src="assets/img/full/' + aImgNames[y] + '" />';
+	    });
+
+
+	    // PREVIOUS BUTTON  -----------------------------------------------------------------------
+	    $(document).on("click", "#previous", function(){
+	        
+	        // get the index of the image
+	        x = whatIsMyIndex();
+
+	        // find the previous image
+	        y = x - 1;
+
+	        // if it is the first image, 
+	        if(x<=0) {
+	        	// make y the last image in the index
+	            y = 18; 
+	           
+	        }
+
+	       	// display the new file on each click
+	        document.getElementById('display').innerHTML = '<img src="assets/img/full/' + aImgNames[y] + '" />';
+	    });
+
+
+
+		// CLOSE BUTTON ---------------------------------------------------------------------------
+		$(document).on("click", "#close", function(){
+
+			// Remove the class that shows the modal, add the class that hides it
+		    $('#modal').removeClass('modal').addClass('hide');
+		    
+		});
+
+	// 	// jquery mobile
+ //    $("#lgeImg").swiperight(function() {
+ //     	        // get the index of the image
+	//         x = whatIsMyIndex();
+
+	//         // find the previous image
+	//         y = x - 1;
+
+	//         // if it is the first image, 
+	//         if(x<=0) {
+	//         	// make y the last image in the index
+	//             y = 18; 
+	           
+	//         }
+
+	//        	// display the new file on each click
+	//         document.getElementById('display').innerHTML = '<img src="assets/img/full/' + aImgNames[y] + '" />';
+ //    });
+
+
+ //    $("#id").swipeleft(function() {
+ //        //do some $.mobile.changePage function
+ //    });
+
+	});
+
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,143 @@
+<!doctype html>
+	<head>
+
+		<title>Junk Sunday</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Junk sunday is open every sunday at 587 Mt Eden Rd, Auckland">
+		<meta name="viewport" content="width=device-width" >
+
+		<!-- MY STYLESHEETS -->
+		<link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+
+		<!-- JQUERY CDN -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    	
+	
+	</head>
+	<body>
+<!-- HEADER -->
+		<header>
+
+			<div class="menu-icon">
+				<a href="index.html"><img src="assets/img/home-icon.png" alt="home"></a>
+				<h3>587 Mt Eden Rd</h3>
+				<img src="assets/img/menu-icon.png" id="menuicon" alt="menu">
+			</div>
+
+			<h1 id="logo"><a href="index.html"><img src="assets/img/logo2.gif" alt="Junk Sunday"></a></h1>
+			<h4>587 MT EDEN ROAD, MT EDEN</h4>
+			<h4>OPEN 9am - 6pm Every Sunday</h4>
+
+		</header>
+<!-- NAVIGATION -->
+		<nav class="nav">
+			<h1 class="hide">Junk Sunday's Retro, Vintage, Antique and Mid-Centry Treasures</h1>
+			<ul class="nav">
+				<li class="nav"><a href="index.html" >HOME</a></li>
+				<li class="nav"><a href="gallery.html" >GALLERY</a></li>
+				<li class="nav"><a href="directions.html">DIRECTIONS</a></li>
+				<li class="nav"><a href="contact.html" id="current">CONTACT</a></li>
+			</ul>
+		</nav>
+<!-- DIVIDER -->
+		<div id="red-line"></div>
+
+<!-- MAIN CONTENT -->
+		<section class="main-content">
+			<h1 class="hide">Junk Sunday's Retro, Vintage, Antique and Mid-Centry Treasures</h1>
+			<div class="background-layer">
+			<article class="icons">
+
+				<!-- facebook icon -->
+				<div class="facebook">
+					<a href="https://www.facebook.com/pages/Junksunday/466260626818399">
+						<img src="assets/img/facebook-icon.png" alt="facebook icon">
+					</a>
+					<a href="https://www.facebook.com/pages/Junksunday/466260626818399">
+						<h4>Join Us On Facebook</h4>
+					</a>
+				</div>
+
+				<!-- google maps icon -->
+				<div class="map-icon">
+					<a href="directions.html">
+						<img src="assets/img/maps-icon.png" alt="map icon">
+					</a>
+					<a href="directions.html"><h4>Get Directions</h4></a>
+				</div>
+			</article>
+			<article class="box">
+				<h1>We would love to hear from you</h1>
+				<p>Trading Hours: 9am - 6pm Every Sunday</p>
+				
+				
+				<p>Address: 587 Mt Eden Road, Mt Eden, Auckland </p>
+				<p>After Hours Contact:</p>
+				<p>027 JUNKRUN and 0204738761</p>
+
+
+			</article>
+		</div>
+		</section>
+<!-- BOTTOM NAVIGATION -->
+		<section class="bottom-nav">
+			<h1 class="hide">Junk Sunday's Retro, Vintage, Antique and Mid-Centry Treasures</h1>
+			<article>
+				<a href="index.html">HOME</a> | <a href="gallery.html">GALLERY</a> | <a href="directions.html">DIRECTIONS</a> | <a href="contact.html">CONTACTS</a>
+				<h4>DESIGNED BY: <a href="http://webcoder.co.nz">webcoder.co.nz</a></h4>
+			</article>
+
+		</section>
+<!-- FOOTER -->
+		<footer>
+			<!-- footer image -->
+			<img src="assets/img/footer-img.png" alt="Junk Sunday 587 Mt Eden Rd, Mt Eden Auckland">
+		</footer>
+
+	</body>
+	<script type="text/javascript">
+
+
+	$(document).ready(function(){
+		
+		// DROPDOWN MENU - FOR MOBILE VIEW   ------------------------------------------------------
+		$('#menuicon').click(function(event) {
+
+			$('nav ').removeClass('nav').addClass('show').toggle(); 
+			$('nav ul').removeClass('nav').addClass('ul').toggle();
+			$('nav ul li').removeClass('nav').addClass('li').toggle();
+			$('nav ul li a').removeClass('nav').addClass('a').toggle();
+		});
+
+		// STICKY NAVIGATION - FOR TABLET AND DESKTOP VIEW  ---------------------------------------
+		//number of pixels before modifying styles
+		var num = 170; 
+
+		// Only run this script if the screen is larger than a mobile 
+		if (window.matchMedia('(min-width: 31.25em)','(min-width: 76.5em)').matches) {
+			$(window).bind('scroll', function () {
+		    	if ($(window).scrollTop() > num) {
+		        	$('nav').addClass('fixed');
+		   	 	} else {
+		        	$('nav').removeClass('fixed');
+		    	}
+			});
+		}
+
+	});
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

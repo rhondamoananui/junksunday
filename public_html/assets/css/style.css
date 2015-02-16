@@ -1,0 +1,269 @@
+@import url(normalize.min.css);
+@import url(../fonts/webfont/stylesheet.css);
+@import url(media-queries.min.css);
+@media screen and (max-width: 31.25em) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #bc3b35;
+    clear: both;
+    /* for mobile devices that dont use flex */ }
+    header div.menu-icon {
+      width: 100%;
+      height: 3em;
+      position: relative;
+      background-color: #FFFFFF; }
+      header div.menu-icon h3 {
+        float: left;
+        clear: right;
+        /*width: 75%;*/
+        text-align: center;
+        margin-left: 1em;
+        margin-right: 1em; }
+      header div.menu-icon img {
+        float: left;
+        width: 3em;
+        height: 3em;
+        margin-left: 1em; }
+      header div.menu-icon #menuicon {
+        position: relative;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        margin-left: 1em; }
+    header div.menu-icon {
+      /*background-color: $white;*/
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      /*			img {
+      				width: 3em;
+      				height: 3em;
+      			}*/ }
+    header #logo {
+      display: flex;
+      margin: 0; }
+      header #logo img {
+        width: 100%; }
+    header h4 {
+      display: none; }
+
+  #red-line {
+    display: none; }
+
+  .nav {
+    display: none; }
+
+  .show {
+    background-color: #bc3b35;
+    color: #FFFFFF;
+    border-top: solid #FFFFFF 0.25em;
+    /*border-bottom: solid $white .25em;*/
+    width: 100%; }
+    .show .ul {
+      width: 100%;
+      margin-bottom: 0;
+      margin-top: 0;
+      padding-left: 0;
+      background-color: #bc3b35; }
+      .show .ul .li {
+        padding: 1em;
+        width: 100%;
+        list-style: none;
+        background-color: #bc3b35;
+        text-align: center; }
+        .show .ul .li .a {
+          text-decoration: none;
+          color: #FFFFFF;
+          padding: 1em;
+          width: 100%;
+          /*height: 5em;*/
+          font-size: 2em; }
+        .show .ul .li #current {
+          color: #fde505; }
+
+  div#red-line {
+    width: 100%;
+    height: 1em;
+    background-color: #bc3b35; }
+
+  section.slider {
+    overflow: none; }
+
+  section.slider figure img {
+    width: 20%;
+    float: left; }
+
+  section.slider figure {
+    display: none; }
+
+  section.main-content {
+    position: relative;
+    min-height: 30em;
+    background-image: url(../img/slider-img3.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* icons */ }
+    section.main-content div.background-layer {
+      position: relative;
+      min-height: 30em;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1em; }
+    section.main-content h1 {
+      text-align: center;
+      color: gray; }
+    section.main-content input {
+      text-align: center;
+      width: 100%; }
+    section.main-content div#directionsPanel {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1em;
+      width: 100%; }
+    section.main-content article.icons {
+      display: block;
+      text-align: center; }
+      section.main-content article.icons .facebook {
+        display: inline-block;
+        width: 5em;
+        margin-bottom: 1em; }
+        section.main-content article.icons .facebook img {
+          width: 4.5em;
+          height: 4.5em; }
+        section.main-content article.icons .facebook h4 {
+          display: none; }
+      section.main-content article.icons .map-icon {
+        display: inline-block;
+        width: 5em;
+        margin-bottom: 1em; }
+        section.main-content article.icons .map-icon img {
+          width: 4.5em;
+          height: 4.5em; }
+        section.main-content article.icons .map-icon h4 {
+          display: none; }
+
+  /* GALLERY */
+  #wrapper {
+    position: relative;
+    top: 0;
+    min-height: 30em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*min-width: 0;*/ }
+    #wrapper img.lightbox_trig {
+      width: 8em;
+      height: 8em;
+      margin: .25em;
+      border: solid 0.2em #222327; }
+
+  #map {
+    display: flex;
+    flex-grow: 4;
+    width: 100%;
+    height: 20em;
+    border: 1px solid #888; }
+
+  article.box {
+    position: relative;
+    top: 0;
+    clear: both;
+    margin-top: 1em;
+    background-color: #FFFFFF; }
+    article.box h1 {
+      position: relative;
+      text-align: center;
+      width: 100%;
+      color: #222327;
+      background-color: #bc3b35;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-family: 'yanone_kaffeesatzregular'; }
+    article.box p {
+      position: relative;
+      text-align: center;
+      padding: .5em; }
+
+  #directionsPanel {
+    width: 100%;
+    border: 0.2em solid #888;
+    background-color: #FFFFFF;
+    z-index: 3; }
+
+  #autocomplete {
+    height: 2em; }
+
+  .hide {
+    display: none; }
+
+  section.bottom-nav {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em;
+    width: 100%;
+    font-size: 1.2em;
+    background-color: whitesmoke; }
+    section.bottom-nav a {
+      text-decoration: none;
+      color: #000; }
+    section.bottom-nav h4 {
+      text-align: center; }
+
+  footer {
+    display: flex;
+    justify-content: space-around; }
+    footer img {
+      width: 100%; }
+
+  .modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); }
+    .modal div#close-button {
+      display: block; }
+      .modal div#close-button button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fde505;
+        height: 2em;
+        background-color: #bc3b35; }
+    .modal #modal-row {
+      display: block; }
+      .modal #modal-row img#previous {
+        position: absolute;
+        top: 15em;
+        left: 0;
+        width: 2em;
+        z-index: 1000; }
+      .modal #modal-row img#next {
+        position: absolute;
+        top: 15em;
+        right: 0;
+        width: 2em; }
+      .modal #modal-row #display {
+        display: inline-block;
+        width: 100%; }
+        .modal #modal-row #display img {
+          position: relative;
+          margin-top: 2em;
+          width: 100%;
+          max-height: 40em; }
+    .modal #bottom-modal {
+      display: block;
+      height: 5em; } }
+/*end of media-queries*/
+
+/*# sourceMappingURL=style.css.map */
